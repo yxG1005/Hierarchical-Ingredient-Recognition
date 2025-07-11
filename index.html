@@ -52,28 +52,32 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Efficient Prompt Tuning for Hierarchical Ingredient
+Recognition</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
+              <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://orcid.org/0009-0004-9345-3275" target="_blank">Yinxuan Gui</a><sup>1, 2</sup></sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="https://binzhubz.github.io/" target="_blank">Bin Zhu</a><sup>2</sup></sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="https://fvl.fudan.edu.cn/people/jingjingchen/" target="_blank">Jingjing Chen</a></sup>*<sup>1</sup></sup>,</span>
+                    <span class="author-block">
+                      <a href="https://faculty.smu.edu.sg/profile/ngo-chong-wah-601" target="_blank">Chong Wah Ngo</a><sup>2</sup></sup>,</span>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">1 Fudan University &nbsp; &nbsp; &nbsp;2 Singapore Management University<br>ICME 2025</span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Corresponding author</small></span>
                   </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://arxiv.org/abs/2504.10322" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -83,7 +87,7 @@
                     </span>
 
                     <!-- Supplementary PDF link -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -91,28 +95,27 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span> -->
 
                   <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- ArXiv abstract Link -->
                 <span class="link-block">
+                  <a href="" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-database"></i>
+                  </span>
+                  <span>dataset (coming soon...)</span>
+                </a>
+                </span>
+                <!-- ArXiv abstract Link -->
+                <!-- <span class="link-block">
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
-                </a>
+                </a> -->
               </span>
             </div>
           </div>
@@ -124,20 +127,23 @@
 
 
 <!-- Teaser video-->
+<!-- Teaser video-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
+      <img src="static/images/motivation.png" alt="Poster Dataset Distillation (PoDD)" class="center-image" />
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        There are <strong>two limitations</strong> in existing works:
+        <br>
+        1.Existing works <strong>only focus on fine-grained ingredients</strong> like “Shredded Pepper” and “Sliced Pepper” while ignoring the <strong><i>hierarchical relationships</i></strong> among ingredients.
+        <br>
+        2.Existing methods <strong>rely on fully fine-tuning models</strong>, which incurs <strong><i>significant training</i></strong> costs.
       </h2>
     </div>
   </div>
 </section>
+<!-- End teaser video -->
+
 <!-- End teaser video -->
 
 <!-- Paper abstract -->
@@ -148,7 +154,8 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+           Fine-grained ingredient recognition presents a significant challenge due to the diverse appearances of ingredients, resulting from different cutting and cooking methods. While existing approaches have shown promising results, they still require extensive training costs and focus solely on fine-grained ingredient recognition. 
+           In this paper, we address these limitations by introducing an efficient prompt-tuning framework that adapts pretrained visual-language models (VLMs), such as CLIP, to the ingredient recognition task without requiring full model finetuning. Additionally, we introduce three-level ingredient hierarchies to enhance both <strong>training performance</strong> and <strong>evaluation robustness</strong>. Specifically, we propose a hierarchical ingredient recognition task, designed to evaluate model performance across different hierarchical levels (e.g., chicken chunks, chicken,  meat), capturing recognition capabilities from coarse- to fine-grained categories. Our method leverages hierarchical labels, training prompt-tuned models with both fine-grained and corresponding coarse-grained labels. Experimental results on the VireoFood172 dataset demonstrate the effectiveness of prompt-tuning with hierarchical labels, achieving superior performance. Moreover, the hierarchical ingredient recognition task provides valuable insights into the model's ability to generalize across different levels of ingredient granularity.
           </p>
         </div>
       </div>
@@ -161,98 +168,45 @@
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+    <div class="container  is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+
+        <h2 class="title is-3">Method</h2>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
+      <strong>Ingredient hierarchy construction</strong>
+      <div class="level-set has-text-justified">
+        <p>
+         We construct a three-level ingredient hierarchy <i>H</i>, where the <i>i</i>-th level denoted as L<sub>i</sub>, each level is composed of an ingredient labels set S<sub>i</sub>, i ∈ {1, 2, 3}. 
+        From levels 1 to 3, the set is constructed from fine-grained to coarse-grained ingredients.  
+        This figure presents the structure of <i>H</i>, with some examples of ingredients at different levels. For example, fine-grained ingredients prepared with specific cooking methods inS<sub>1</sub>, such as "potato slices" and "shredded pork", 
+        are grouped into broader ingredients like "potato" and "pork" in S<sub>2</sub>, which are then further grouped into more coarse-grained ingredients such as vegetables and meats in S<sub>3</sub>. 
+        We introduce three-level ingredient hierarchies to enhance both <strong>training performance</strong> and <strong>evaluation robustness</strong>.
+       </p>
+       <!-- <br> -->
+       <img src="static/images/hierarchy.png" alt="Global Semantics" class="blend-img-background center-image"/>
      </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
+
+     <br>
+      <strong>Cross-hierarchy prompt tuning</strong>
+      <div class="level-set has-text-justified">
+        <p>
+        We propose an efficient two-stage prompt tuning method based on pretrained visual language model (e.g. CLIP) without training the whole model. 
+        This figure depicts an overview of our method. We follow DualCoOp in the first stage. Given food images and hierarchical ingredient labels, three CLIP models, M<sub>1</sub>, M<sub>2</sub> and M<sub>3</sub>, are prompt-tuned using S<sub>1</sub>, S<sub>2</sub>, and S<sub>3</sub> as labels respectively.
+        However, the first training phase fails to represent the hierarchical connections between labels at various levels.
+        To model the connections, we further introduce the hierarchy to train the three models together in the second stage, supervised by a combination of their individual losses.
+
+       </p>
+       <!-- <br> -->
+       <img src="static/images/model-overview-3.png" alt="Global Semantics" class="blend-img-background center-image"/>
+     </div>
+
+
+
 </div>
 </section>
 <!-- End image carousel -->
 
 
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
 
 
 
@@ -262,14 +216,55 @@
 <!-- Paper poster -->
 <section class="hero is-small is-light">
   <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
+    <div class="container  is-max-desktop">
+        <h2 class="title is-3">Results comparison</h2>
+      
+      <div class="level-set has-text-justified">
+        <p>
+         This table presents the performance of our proposed method (second stage), our baseline DualCoOp (first stage), along with zero-shot performance of CLIP and some fully fine-tuning methods. 
+         With prompt tuning by DualCoOp in the first stage, the performance is significantly boosted than CLIP-zero-shot in all the three levels, with only 5.8M, 2.3M and 0.2M trainable parameters for levels 1, 2 and 3 respectively. Importantly, our method after the second stage training achieves superior performance compared to DualCoOp without increasing the trainable parameters, 
+         which demonstrates the relationships among different hierarchy levels can enhance the accuracy of hierarchical ingredient recognition consistently. Though fully fine-tuning methods (highlighted in gray) show better results, the training cost is at least 7.7 times more than our method. 
 
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
+       </p>
+       <!-- <br> -->
+       <img src="static/images/results.png" alt="Global Semantics" class="blend-img-background center-image"/>
+     </div>
+      <br>
+      <div class="level-set has-text-justified">
+        <p>
+       Qalitative examples which compare the prediction results of our method and DualCoOp across three levels of the hierarchy futher demonstrate effectiveness of our method.
+
+       </p>
+       <!-- <br> -->
+       <img src="static/images/prediction-examples-3.png" alt="Global Semantics" class="blend-img-background center-image"/>
+     </div>
+     </div>
+  </section>
+<!--End paper poster -->
+
+
+
+
+
+<!-- Paper poster -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container  is-max-desktop">
+        <h2 class="title is-3">Zero-shot evaluation</h2>
+      
+      <div class="level-set has-text-justified">
+        <p>
+         Except for enhancing training performance, the ingredient hierarchy can also be utilized for model evaluation.We evaluate predictions
+at each level and left-bottom figure presents zero-shot results in VireoFood172 based on LLaVA  and CLIP  . 
+To investigate the model's performance for specific ingredients at
+different levels, we compute F1 score of each ingredient at
+different levels based on LLaVA and show some examples
+in right-bottom figure.
+       </p>
+       <br>
+       <img src="static/images/zeroshot.png" alt="Global Semantics" class="blend-img-background center-image"/>
+     </div>
+
   </section>
 <!--End paper poster -->
 
@@ -278,7 +273,12 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@article{gui2025efficient,
+  title={Efficient Prompt Tuning for Hierarchical Ingredient Recognition},
+  author={Gui, Yinxuan and Zhu, Bin and Chen, Jingjing and Ngo, Chong-Wah},
+  journal={arXiv preprint arXiv:2504.10322},
+  year={2025}
+}</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
